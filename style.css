@@ -1,0 +1,63 @@
+*{
+    box-sizing: border-box;
+}
+
+.password{
+    border-radius: 6px;
+    border: none;
+    background: #F2F2F2;
+    color: #808080;
+    font-family: Roboto, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    height: 48px;
+    max-width: 360px;
+    width: 100%;
+    padding: 8px;
+    padding-left: 16px;
+    padding-right: 40px;
+}
+.password:focus-visible{
+    outline: none;
+}
+
+.password__show{
+    position: absolute;
+    padding: 8px;
+    right: 8px;
+    top: 0px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    height: 100%;
+}
+
+.password__label{
+    position: relative;
+    display: block;
+    max-width: 360px;
+    width: 100%;
+    height: 48px;
+    margin-bottom: 20px;
+}
+
+#password2{
+    -webkit-text-security: unset;
+    
+}
+
+#btn2{
+    height: 0;
+    transition: 0.4s;
+}
+#btn2::before{
+    position: absolute;
+    content: url(./eye.svg);
+    padding: 8px;
+    top: 4px;
+    right: -2px;
+}
+
+#btn2:checked + .password{
+    -webkit-text-security: text;
+}
